@@ -18,7 +18,10 @@ def sentimentanalyzer(sent):
     score = softmax(score)
 
     return pd.Series(score, index=['negative', 'neutral', 'positive'])
-    
+
+
+root = './data/'
+
 texts = pd.read_excel(f'{root}/SentbySent.xlsx', index_col=0)
 
 scores = texts['sentences'].apply(sentimentanalyzer)
