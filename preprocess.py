@@ -5,8 +5,9 @@ import re
 from nltk.tokenize import sent_tokenize
 
 root = './data'    # File path for an original text file
+file_name = 'pg2542.txt'
 # Step 1: Read the text file with 'utf-8' encoding
-with open(f'{root}/pg2542.txt', 'r', encoding='utf-8') as file:
+with open(f'{root}/{file_name}', 'r', encoding='utf-8') as file:
     text = file.read()
 
 # Step 2: Split the text by two newline characters to get each character's line
